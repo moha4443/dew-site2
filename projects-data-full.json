@@ -1,0 +1,460 @@
+[
+  {
+    "Annex (N)": "DEW Reference List of Main References"
+  },
+  {
+    "Annex (N)": "NO",
+    "__EMPTY": "Client",
+    "__EMPTY_1": "Scope of work",
+    "__EMPTY_2": "Date",
+    "__EMPTY_4": "Location",
+    "__EMPTY_5": "Capacity\n(m3/D)"
+  },
+  {
+    "Annex (N)": 1,
+    "__EMPTY": "US Corps of Engineering",
+    "__EMPTY_1": "Demi-Water Plant",
+    "__EMPTY_2": 1986,
+    "__EMPTY_4": "Egypt / Cairo",
+    "__EMPTY_5": 1200
+  },
+  {
+    "Annex (N)": 2,
+    "__EMPTY": "Sinai for Hotels & Diving Centers",
+    "__EMPTY_1": "SWRO Turbine Seawater & Seawater Intake",
+    "__EMPTY_2": 1987,
+    "__EMPTY_4": "Egypt / Dahab",
+    "__EMPTY_5": 250
+  },
+  {
+    "Annex (N)": 3,
+    "__EMPTY": "Sinai for Hotels & Diving Centers",
+    "__EMPTY_1": "SWRO Turbine System",
+    "__EMPTY_2": 1987,
+    "__EMPTY_4": "Egypt / Sharm El Sheikh",
+    "__EMPTY_5": 500
+  },
+  {
+    "Annex (N)": 4,
+    "__EMPTY": "STANDENG",
+    "__EMPTY_1": "SWRO Turbine Systems",
+    "__EMPTY_2": 1989,
+    "__EMPTY_4": "Libya / Tubrouk",
+    "__EMPTY_5": 1000
+  },
+  {
+    "Annex (N)": 5,
+    "__EMPTY": "EL Tagouri",
+    "__EMPTY_1": "Water Treatment Plant",
+    "__EMPTY_2": 1990,
+    "__EMPTY_4": "Egypt / Dakhahlia",
+    "__EMPTY_5": 1800
+  },
+  {
+    "Annex (N)": 6,
+    "__EMPTY": "Rotana",
+    "__EMPTY_1": "SWRO Turbine System",
+    "__EMPTY_2": 1991,
+    "__EMPTY_4": "Egypt / Hurgada",
+    "__EMPTY_5": 500
+  },
+  {
+    "Annex (N)": 7,
+    "__EMPTY": "Isis Island Hotel",
+    "__EMPTY_1": "Water Treatment Plant",
+    "__EMPTY_2": 1992,
+    "__EMPTY_4": "Egypt / Aswan",
+    "__EMPTY_5": 2400
+  },
+  {
+    "Annex (N)": 8,
+    "__EMPTY": "Amegato",
+    "__EMPTY_1": "Water Treatment Plant",
+    "__EMPTY_2": 1993,
+    "__EMPTY_4": "Egypt / Anater - Essna",
+    "__EMPTY_5": 2000
+  },
+  {
+    "Annex (N)": 9,
+    "__EMPTY": "Anba Samuel Monastery",
+    "__EMPTY_1": "Brackish RO",
+    "__EMPTY_2": 1996,
+    "__EMPTY_4": "Egypt / Meniya",
+    "__EMPTY_5": 200
+  },
+  {
+    "Annex (N)": 10,
+    "__EMPTY": "Sinai for Touristic Development\n(Sicot)",
+    "__EMPTY_1": "RO Turbine",
+    "__EMPTY_2": 1996,
+    "__EMPTY_4": "Egypt / Sharm",
+    "__EMPTY_5": 600
+  },
+  {
+    "Annex (N)": 11,
+    "__EMPTY": "Egoth",
+    "__EMPTY_1": "RO Turbine",
+    "__EMPTY_2": 1997,
+    "__EMPTY_4": "Egypt / Dahab",
+    "__EMPTY_5": 250
+  },
+  {
+    "Annex (N)": 12,
+    "__EMPTY": "National Company for Maize\nProducts",
+    "__EMPTY_1": "Industrial Waste Treatment",
+    "__EMPTY_2": 1998,
+    "__EMPTY_4": "Egypt/10TH Ramadan",
+    "__EMPTY_5": 5000
+  },
+  {
+    "Annex (N)": 13,
+    "__EMPTY": "Sinai for Hotels & Diving Centers",
+    "__EMPTY_1": "RO Turbine",
+    "__EMPTY_2": 1998,
+    "__EMPTY_4": "Egypt / Nuweiba",
+    "__EMPTY_5": 250
+  },
+  {
+    "Annex (N)": 14,
+    "__EMPTY": "Agricultural Development Company",
+    "__EMPTY_1": "Brackish Ro",
+    "__EMPTY_2": 2000,
+    "__EMPTY_4": "Egypt / 6th Oct",
+    "__EMPTY_5": 2000
+  },
+  {
+    "Annex (N)": 15,
+    "__EMPTY": "Sinai for Touristic Development\n(Sicot)",
+    "__EMPTY_1": "RO Turbine",
+    "__EMPTY_2": 2000,
+    "__EMPTY_4": "Egypt / Sharm",
+    "__EMPTY_5": 1000
+  },
+  {
+    "Annex (N)": 16,
+    "__EMPTY": "El Ahly Construction Group",
+    "__EMPTY_1": "Ro Energy Recovery ( ERS )",
+    "__EMPTY_2": 2001,
+    "__EMPTY_4": "Egypt / Sharm",
+    "__EMPTY_5": 1500
+  },
+  {
+    "Annex (N)": 17,
+    "__EMPTY": "Sinai for Touristic Development\n(Sicot)",
+    "__EMPTY_1": "RO Turbine",
+    "__EMPTY_2": 2001,
+    "__EMPTY_4": "Egypt / Sharm",
+    "__EMPTY_5": 1000
+  },
+  {
+    "Annex (N)": 18,
+    "__EMPTY": "Sinai for Touristic Development\n(Sicot)",
+    "__EMPTY_1": "Ro Energy Recovery ( ERS )",
+    "__EMPTY_2": 2002,
+    "__EMPTY_4": "Egypt / Sharm",
+    "__EMPTY_5": 800
+  },
+  {
+    "Annex (N)": 19,
+    "__EMPTY": "Gioula Glass Works (part of BA glass industries)",
+    "__EMPTY_1": "Physical & Chemical Treatment and sludge dewatering in prefabricated units - Industrial Waste Water",
+    "__EMPTY_2": "2003-04",
+    "__EMPTY_4": "Greece"
+  },
+  {
+    "Annex (N)": 20,
+    "__EMPTY": "Sinai for Hotels & Diving Centers",
+    "__EMPTY_1": "Ro Energy Recovery ( ERS )",
+    "__EMPTY_2": 2003,
+    "__EMPTY_4": "Egypt / Sharm",
+    "__EMPTY_5": 250
+  },
+  {
+    "Annex (N)": 21,
+    "__EMPTY": "Sinai for Hotels & Diving Centers",
+    "__EMPTY_1": "Sewage Treatment Plant",
+    "__EMPTY_2": 2004,
+    "__EMPTY_4": "Egypt / Sharm",
+    "__EMPTY_5": 250
+  },
+  {
+    "Annex (N)": 22,
+    "__EMPTY": "Sinai for Touristic Development\n(Sicot)",
+    "__EMPTY_1": "Ro Energy Recovery ( ERS )",
+    "__EMPTY_2": 2004,
+    "__EMPTY_4": "Egypt / Sharm",
+    "__EMPTY_5": 2000
+  },
+  {
+    "Annex (N)": 23,
+    "__EMPTY": "Sinai for Touristic Development\n(Sicot)",
+    "__EMPTY_1": "Saltec Dt – KSB Energy Recovery",
+    "__EMPTY_2": 2005,
+    "__EMPTY_4": "Egypt / Sharm",
+    "__EMPTY_5": 2000
+  },
+  {
+    "Annex (N)": 24,
+    "__EMPTY": "Petroleum Development of Oman",
+    "__EMPTY_1": "Design & Consultancy For complete RO Plant under API\nStandards",
+    "__EMPTY_2": 2005,
+    "__EMPTY_4": "Oman / Fahud",
+    "__EMPTY_5": 3000
+  },
+  {
+    "Annex (N)": 25,
+    "__EMPTY": "Petroleum Development of Oman",
+    "__EMPTY_1": "Fine Filtration System",
+    "__EMPTY_2": 2005,
+    "__EMPTY_4": "Oman / Fahud",
+    "__EMPTY_5": 3000
+  },
+  {
+    "Annex (N)": 26,
+    "__EMPTY": "AL Zawra / MHEW",
+    "__EMPTY_1": "RO Energy Recovery (ERS)",
+    "__EMPTY_2": 2005,
+    "__EMPTY_4": "Oman / Ras Al Hadd",
+    "__EMPTY_5": 500
+  },
+  {
+    "Annex (N)": 27,
+    "__EMPTY": "ONEC / MHEW",
+    "__EMPTY_1": "Brackish RO",
+    "__EMPTY_2": 2006,
+    "__EMPTY_4": "Oman / AL HIJJ",
+    "__EMPTY_5": 100
+  },
+  {
+    "Annex (N)": 28,
+    "__EMPTY": "ONEC / MHEW",
+    "__EMPTY_1": "Brackish RO",
+    "__EMPTY_2": 2006,
+    "__EMPTY_4": "Oman / Haima",
+    "__EMPTY_5": 50
+  },
+  {
+    "Annex (N)": 29,
+    "__EMPTY": "ONEC / MHEW",
+    "__EMPTY_1": "Brackish RO",
+    "__EMPTY_2": 2006,
+    "__EMPTY_4": "Oman / Abu Mudhaibi",
+    "__EMPTY_5": 50
+  },
+  {
+    "Annex (N)": 30,
+    "__EMPTY": "Canned Food Processing Factory, Stara\nZagora",
+    "__EMPTY_1": "MBBR technology “DEVISE High-Rate Bio-Plant”  Model:\n15\nBIOMAX-3 - Industrial Waste",
+    "__EMPTY_2": 2007,
+    "__EMPTY_4": "Bulgaria",
+    "__EMPTY_5": 50
+  },
+  {
+    "Annex (N)": 31,
+    "__EMPTY": "Dorra Group",
+    "__EMPTY_1": "RO using Energy Recovery",
+    "__EMPTY_2": 2007,
+    "__EMPTY_4": "Egypt / Sharm",
+    "__EMPTY_5": 800
+  },
+  {
+    "Annex (N)": 32,
+    "__EMPTY": "Municipality of Tilissos, Crete",
+    "__EMPTY_1": "MBBR technology “DEVISE High-Rate Bio-Plant”  Model:\n40 ΒΙΟΜΑΧ-5D - Municipal Waste",
+    "__EMPTY_2": 2007,
+    "__EMPTY_4": "Greece",
+    "__EMPTY_5": 280
+  },
+  {
+    "__EMPTY_1": "Containerized Sludge Dewatering Plant, Model: CSDP-1",
+    "__EMPTY_2": 2007,
+    "__EMPTY_4": "Greece",
+    "__EMPTY_5": 24
+  },
+  {
+    "Annex (N)": 33,
+    "__EMPTY": "Small community in Grevena area",
+    "__EMPTY_1": "MBBR technology “DEVISE High-Rate Bio-Plant”\nModel:21\nΒΙΟΜΑΧ-3 - Municipal Waste",
+    "__EMPTY_2": 2007,
+    "__EMPTY_4": "Greece",
+    "__EMPTY_5": 180
+  },
+  {
+    "Annex (N)": 34,
+    "__EMPTY": "Municipality of Mochos Malia, Crete",
+    "__EMPTY_1": "MBBR technology “DEVISE High-Rate Bio-Plant”  Model:\n33\nΒΙΟΜΑΧ-5D - Municipal Waste",
+    "__EMPTY_2": 2008,
+    "__EMPTY_4": "Greece",
+    "__EMPTY_5": 240
+  },
+  {
+    "Annex (N)": 35,
+    "__EMPTY": "Municipality of Kerkini,  Prefecture of\nGrevena",
+    "__EMPTY_1": "MBBR technology “DEVISE High-Rate Bio-Plant”   Model:\n2\nx 40ΒΙΟΜΑΧ-5D - Municipal Waste",
+    "__EMPTY_2": 2008,
+    "__EMPTY_4": "Greece",
+    "__EMPTY_5": 500
+  },
+  {
+    "Annex (N)": 36,
+    "__EMPTY": "Municipality of Fodele, Prefecture of Heraklion, Crete",
+    "__EMPTY_1": "MBBR technology “DEVISE High-Rate Bio-Plant”Model: 2 x 33 ΒΙΟΜΑΧ-5D (560 KgCOD/day) - Landfill Leachates",
+    "__EMPTY_2": 2008,
+    "__EMPTY_4": "Greece",
+    "__EMPTY_5": 66
+  },
+  {
+    "Annex (N)": 37,
+    "__EMPTY": "Elounta Luxury Hotel, Crete",
+    "__EMPTY_1": "MBBR technology “DEVISE High-Rate Bio-Plant”Model: 15 ΒΙΟΜΑΧ-3 - Municipal Waste",
+    "__EMPTY_2": 2008,
+    "__EMPTY_4": "Greece",
+    "__EMPTY_5": 100
+  },
+  {
+    "Annex (N)": 38,
+    "__EMPTY": "Municipality of Seli",
+    "__EMPTY_1": "MBBR technology “DEVISE High-Rate Bio-Plant”    Model: 40 ΒΙΟΜΑΧ-5D - Municipal Waste",
+    "__EMPTY_2": 2008,
+    "__EMPTY_4": "Greece",
+    "__EMPTY_5": "250-300"
+  },
+  {
+    "Annex (N)": 39,
+    "__EMPTY": "Municipality of Camross",
+    "__EMPTY_1": "MBBR technology “DEVISE High-Rate Bio-Plant”    Model: 15 ΒΙΟΜΑΧ-3 - Municipal Waste",
+    "__EMPTY_2": 2008,
+    "__EMPTY_4": "Ireland",
+    "__EMPTY_5": 125
+  },
+  {
+    "Annex (N)": 40,
+    "__EMPTY": "Pulp Paper Factory VIOKYT S.A.",
+    "__EMPTY_1": "FBBR-midi-4 - Sludge Dewatering",
+    "__EMPTY_2": 2008,
+    "__EMPTY_4": "Greece"
+  },
+  {
+    "Annex (N)": 41,
+    "__EMPTY": "Municipality of Arta",
+    "__EMPTY_1": "MBBR technology “DEVISE High-Rate Bio-Plant”    Model:\n15 ΒΙΟΜΑΧ-5D- Landfill Leachates",
+    "__EMPTY_2": 2008,
+    "__EMPTY_4": "Greece",
+    "__EMPTY_5": 20
+  },
+  {
+    "Annex (N)": 42,
+    "__EMPTY": "Municipality of Skala-Poros, Kefalonia",
+    "__EMPTY_1": "MBBR technology “DEVISE High-Rate Bio-Plant”    Model: 33 ΒΙΟΜΑΧ 5D - Municipal Waste",
+    "__EMPTY_2": 2008,
+    "__EMPTY_4": "Greece",
+    "__EMPTY_5": 60
+  },
+  {
+    "Annex (N)": 43,
+    "__EMPTY": "Prison Complex Domokos",
+    "__EMPTY_1": "MBBR technology “DEVISE High-Rate Bio-Plant”\nModel:40 ΒΙΟΜΑΧ-5D - Municipal Waste",
+    "__EMPTY_2": 2008,
+    "__EMPTY_4": "Greece",
+    "__EMPTY_5": 300
+  },
+  {
+    "__EMPTY_1": "Containerized Sludge Dewatering Plant Model: CSDP-2",
+    "__EMPTY_5": 2
+  },
+  {
+    "Annex (N)": 44,
+    "__EMPTY": "Municipality of Krassi, Crete",
+    "__EMPTY_1": "MBMR technology “DEVISE Ultra-Clear Bio-Plant”  Model:\n90 MBMR/4 - Municipal Waste",
+    "__EMPTY_2": 2008,
+    "__EMPTY_4": "Greece",
+    "__EMPTY_5": 90
+  },
+  {
+    "Annex (N)": 45,
+    "__EMPTY": "Public Authority of Electricity &\nWater",
+    "__EMPTY_1": "RO using Energy Recovery & Ultrafiltration",
+    "__EMPTY_2": 2009,
+    "__EMPTY_4": "Oman / Quriyat",
+    "__EMPTY_5": 2400
+  },
+  {
+    "Annex (N)": 46,
+    "__EMPTY": "Public Authority of Electricity &\nWater",
+    "__EMPTY_1": "RO using Energy Recovery & Ultrafiltration",
+    "__EMPTY_2": 2009,
+    "__EMPTY_4": "Oman / Sur",
+    "__EMPTY_5": 2277
+  },
+  {
+    "Annex (N)": 50,
+    "__EMPTY": "Municipality of Skala-Poros,\nKefalonia",
+    "__EMPTY_1": "Ultra Filtration Technology Package Unit \"DEVISE UF-\nPACK\" - Municipal Waste",
+    "__EMPTY_2": 2009,
+    "__EMPTY_4": "Greece",
+    "__EMPTY_5": 800
+  },
+  {
+    "Annex (N)": 47,
+    "__EMPTY": "Carpet Cleaning Industry EUGENIKOS",
+    "__EMPTY_1": "MBBR technology “DEVISE High-Rate Bio-Plant”  Model:\n10\nΒΙΟΜΑΧ-3 - Industrial Waste Water",
+    "__EMPTY_2": 2009,
+    "__EMPTY_4": "Greece",
+    "__EMPTY_5": 90
+  },
+  {
+    "Annex (N)": 48,
+    "__EMPTY": "Public Authority of Electricity &\nWater",
+    "__EMPTY_1": "RO using Energy Recovery",
+    "__EMPTY_2": 2009,
+    "__EMPTY_4": "Oman / Tiwi",
+    "__EMPTY_5": 6831
+  },
+  {
+    "Annex (N)": 49,
+    "__EMPTY": "Public Authority of Electricity &\nWater",
+    "__EMPTY_1": "Reject HDPE Pipeline Length 3,2 km",
+    "__EMPTY_2": 2009,
+    "__EMPTY_4": "Oman / Quriyat"
+  },
+  {
+    "Annex (N)": 50,
+    "__EMPTY": "Industrial Laundries PROTEAS AEBE",
+    "__EMPTY_1": "MBBR technology “DEVISE High-Rate Bio-Plant”  Model:\n27\nΒΙΟΜΑΧ-4 - Industrial",
+    "__EMPTY_2": 2009,
+    "__EMPTY_4": "Greece",
+    "__EMPTY_5": 300
+  },
+  {
+    "__EMPTY_1": "Ultra Filtration Technology Package Unit \"DEVISE UF- PACK\" - Industrial",
+    "__EMPTY_5": 300
+  },
+  {
+    "Annex (N)": 51,
+    "__EMPTY": "Rural Areas Electricity Company",
+    "__EMPTY_1": "Containerized RO using Energy Recovery",
+    "__EMPTY_2": 2009,
+    "__EMPTY_4": "Oman / Hallaniyat\nIsland",
+    "__EMPTY_5": 150
+  },
+  {
+    "Annex (N)": 52,
+    "__EMPTY": "Radisson Hotel Maputo",
+    "__EMPTY_1": "MBBR technology “DEVISE High-Rate Bio-Plant” Model:21\nBIOMAX-4, Municpal Waste",
+    "__EMPTY_2": 2009,
+    "__EMPTY_4": "Mozambique",
+    "__EMPTY_5": 140
+  },
+  {
+    "__EMPTY_1": "Containerized Sludge Dewatering Plant. Model: CSDP-1",
+    "__EMPTY_5": 24
+  },
+  {
+    "Annex (N)": 53,
+    "__EMPTY": "IKEA Hyper Market, Larissa",
+    "__EMPTY_1": "MBBR technology “DEVISE High-Rate Bio-Plant”   Model:\n10 BIOMAX-3, Municipal Waste",
+    "__EMPTY_2": 2009,
+    "__EMPTY_4": "Greece",
+    "__EMPTY_5": 60
+  }
+]
