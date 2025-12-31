@@ -17,7 +17,7 @@ export const Navigation = () => {
               alt="DEW logo"
               className="h-10 w-10 sm:h-12 sm:w-12 md:h-14 md:w-14 rounded-full object-contain bg-background shadow-sm"
             />
-            <span className="text-sm sm:text-lg md:text-xl lg:text-2xl font-bold bg-gradient-to-r from-primary via-accent to-primary-glow bg-clip-text text-transparent line-clamp-2 sm:line-clamp-1">
+            <span className="text-sm sm:text-lg md:text-xl lg:text-2xl font-bold text-[#1a237e] line-clamp-2 sm:line-clamp-1">
               DEW - Devise Energy &amp; Water
             </span>
           </Link>

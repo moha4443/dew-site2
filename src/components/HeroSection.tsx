@@ -3,7 +3,7 @@ import heroImage from '@/assets/hero-water.jpg';
 export const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background image with soft overlay (similar to Why page) */}
+      {/* Background image with soft overlay */}
       <div className="absolute inset-0">
         <img
           src={heroImage}

@@ -1,12 +1,43 @@
 import { Droplets, Factory, Globe, Award } from 'lucide-react';
 import waterConservation from '@/assets/water-conservation.jpg';
-import { useScrollReveal } from '@/hooks/useScrollReveal';
-import { AnimatedNumber } from '@/components/AnimatedNumber';
+import { useState, useEffect, useRef } from 'react';
+import { AnimatedNumber } from './AnimatedNumber';
 
 export const FeaturesSection = () => {
-  const { ref: statsRef, isVisible: statsVisible } = useScrollReveal({ threshold: 0.2 });
-  const { ref: videoRef, isVisible: videoVisible } = useScrollReveal({ threshold: 0.2 });
-  const { ref: missionRef, isVisible: missionVisible } = useScrollReveal({ threshold: 0.2 });
+  const [statsVisible, setStatsVisible] = useState(false);
+  const [videoVisible, setVideoVisible] = useState(false);
+  const [missionVisible, setMissionVisible] = useState(false);
+
+  const statsRef = useRef<HTMLDivElement>(null);
+  const videoRef = useRef<HTMLDivElement>(null);
+  const missionRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.target === statsRef.current && entry.isIntersecting) {
+            setStatsVisible(true);
+          }
+          if (entry.target === videoRef.current && entry.isIntersecting) {
+            setVideoVisible(true);
+          }
+          if (entry.target === missionRef.current && entry.isIntersecting) {
+            setMissionVisible(true);
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    if (statsRef.current) observer.observe(statsRef.current);
+    if (videoRef.current) observer.observe(videoRef.current);
+    if (missionRef.current) observer.observe(missionRef.current);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
 
   const stats = [
     {

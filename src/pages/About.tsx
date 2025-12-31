@@ -414,4 +414,3 @@ const GoalSection = ({
 };
 
 export default About;
-
