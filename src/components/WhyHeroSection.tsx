@@ -2,39 +2,38 @@ import whyHero from '@/assets/why-hero.jpg';
 
 export const WhyHeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-end justify-center overflow-hidden bg-slate-900 pb-20">
-      {/* Background Image - Full View */}
-      <div className="absolute inset-0">
+    <section className="relative min-h-screen flex flex-col justify-end overflow-hidden bg-slate-900">
+      {/* Background Image - Full View with padding for navigation */}
+      <div className="absolute inset-0 pt-24 sm:pt-28">
         <img
           src={whyHero}
           alt="Why DEW is Different"
-          className="w-full h-full object-contain object-top"
+          className="w-full h-full object-contain object-center"
         />
       </div>
 
-      {/* Bottom Gradient Overlay - Only at bottom for text readability */}
-      <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-slate-900 to-transparent" />
+      {/* Bottom Gradient Overlay - Elegant fade */}
+      <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent" />
 
-      {/* Content - Positioned at Bottom */}
-      <div className="relative z-10 container mx-auto px-4 text-center">
-        {/* Text Box with Glass Effect */}
-        <div className="inline-block">
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-4 tracking-wide">
-            WHY WE ARE DIFFERENT
-          </h1>
-          <div className="w-32 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 mx-auto mb-6 rounded-full" />
-          <p className="text-lg md:text-xl lg:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed">
-            Discover what sets DEW apart in delivering innovative water and energy solutions
-          </p>
-        </div>
-      </div>
+      {/* Content - Professional Bottom Bar */}
+      <div className="relative z-10 w-full">
+        {/* Elegant bottom bar with glass effect */}
+        <div className="bg-slate-900/70 backdrop-blur-md border-t border-white/10">
+          <div className="container mx-auto px-4">
+            <div className="flex items-center justify-center py-6">
+              {/* Left decorative line */}
+              <div className="hidden sm:block flex-1 h-px bg-gradient-to-r from-transparent via-cyan-500/50 to-cyan-500" />
 
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10">
-        <div className="flex flex-col items-center text-white/60">
-          <span className="text-xs mb-2 tracking-wider">SCROLL</span>
-          <div className="w-6 h-10 border-2 border-white/40 rounded-full flex items-start justify-center p-1.5">
-            <div className="w-1 h-2 bg-white/60 rounded-full animate-bounce" />
+              {/* Title with elegant styling */}
+              <div className="px-8 text-center">
+                <h1 className="text-lg sm:text-xl md:text-2xl font-light text-white tracking-[0.4em] uppercase">
+                  Why We Are Different
+                </h1>
+              </div>
+
+              {/* Right decorative line */}
+              <div className="hidden sm:block flex-1 h-px bg-gradient-to-l from-transparent via-cyan-500/50 to-cyan-500" />
+            </div>
           </div>
         </div>
       </div>

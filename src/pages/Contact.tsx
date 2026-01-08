@@ -85,7 +85,7 @@ const Contact = () => {
       </div>
 
       <Navigation />
-      <main className="pt-20 sm:pt-24 pb-12 sm:pb-16 relative z-10 mobile-safe-area-bottom">
+      <main className="pt-24 sm:pt-28 pb-12 sm:pb-16 relative z-10 mobile-safe-area-bottom">
         <div className="mobile-container mx-auto max-w-3xl">
           <h1 className="responsive-heading-md text-center mb-3 sm:mb-4 bg-gradient-to-r from-blue-600 via-cyan-600 to-sky-600 bg-clip-text text-transparent">
             Contact

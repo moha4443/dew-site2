@@ -17,7 +17,7 @@ const PrivacyPolicy = () => {
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-purple-50" />
             </div>
 
-            <main className="pt-20 sm:pt-24 pb-12 sm:pb-16 mobile-safe-area-bottom">
+            <main className="pt-24 sm:pt-28 pb-12 sm:pb-16 mobile-safe-area-bottom">
                 <div className="mobile-container mx-auto max-w-4xl">
                     {/* Header */}
                     <div ref={headerRef} className={`text-center mb-8 sm:mb-12 ${headerVisible ? 'fade-in-up' : 'opacity-0'}`}>

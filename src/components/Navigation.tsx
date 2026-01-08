@@ -9,15 +9,15 @@ export const Navigation = () => {
     return (
         <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-lg border-b border-border mobile-safe-area-top">
             <div className="mobile-container mx-auto">
-                <div className="flex items-center justify-between h-16 sm:h-20">
+                <div className="flex items-center justify-between h-20 sm:h-24">
                     {/* Logo */}
                     <Link to="/" className="flex items-center gap-2 sm:gap-3 flex-shrink-0 max-w-[70%] sm:max-w-none">
                         <img
                             src="/logo.jpg"
                             alt="DEW logo"
-                            className="h-10 w-10 sm:h-12 sm:w-12 md:h-14 md:w-14 rounded-full object-contain bg-background shadow-sm"
+                            className="h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16 lg:h-[72px] lg:w-[72px] rounded-full object-contain bg-background shadow-md"
                         />
-                        <span className="text-sm sm:text-lg md:text-xl lg:text-2xl font-bold text-[#1a237e] line-clamp-2 sm:line-clamp-1">
+                        <span className="text-base sm:text-xl md:text-2xl lg:text-3xl font-bold text-[#1a237e] line-clamp-2 sm:line-clamp-1">
                             DEVISE ENERGY &amp; WATER
                         </span>
                     </Link>
@@ -68,7 +68,7 @@ export const Navigation = () => {
                         />
 
                         {/* Menu Content */}
-                        <div className="fixed top-[4rem] sm:top-[5rem] left-0 right-0 bg-background border-b border-border shadow-xl z-50 md:hidden animate-slide-down max-h-[calc(100vh-4rem)] overflow-y-auto">
+                        <div className="fixed top-[5rem] sm:top-[6rem] left-0 right-0 bg-background border-b border-border shadow-xl z-50 md:hidden animate-slide-down max-h-[calc(100vh-5rem)] overflow-y-auto">
                             <div className="mobile-container py-6 space-y-1">
                                 <Link
                                     to="/"

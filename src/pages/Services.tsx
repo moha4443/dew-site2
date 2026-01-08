@@ -58,7 +58,7 @@ const Services = () => {
       {/* Animated Gradient Background */}
       <div className="fixed inset-0 -z-10 animate-gradient bg-gradient-to-br from-white via-blue-50 to-blue-100" />
 
-      <main className="pt-24 pb-16">
+      <main className="pt-28 sm:pt-32 pb-16">
         {/* Hero Section */}
         <div className="container mx-auto px-4 lg:px-8 max-w-7xl mb-16">
           <div className="text-center animate-fade-in">

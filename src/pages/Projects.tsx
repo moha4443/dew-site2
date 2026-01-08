@@ -101,8 +101,8 @@ const EmbeddedMap = () => {
   useEffect(() => {
     if (mapRef.current && !mapInstanceRef.current) {
       const map = L.map(mapRef.current, {
-        center: [25, 20],
-        zoom: 2,
+        center: [30, 25],
+        zoom: 3,
         zoomControl: true,
         scrollWheelZoom: true,
         minZoom: 2,
@@ -311,7 +311,7 @@ const EmbeddedMap = () => {
         {/* Stats Overlay */}
         <div className="absolute top-4 right-4 z-[1000] bg-white/95 backdrop-blur-sm p-4 rounded-xl shadow-lg border border-slate-200">
           <div className="text-center mb-3 pb-3 border-b border-slate-200">
-            <div className="text-xl font-bold text-primary">692,000</div>
+            <div className="text-xl font-bold text-primary">567,748</div>
             <div className="text-[10px] text-slate-500 leading-tight">m³/day Water Treatment<br />& Desalination</div>
           </div>
           <div className="grid grid-cols-2 gap-3 text-center">
@@ -399,15 +399,17 @@ const Projects = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-purple-50" />
       </div>
 
-      <main className="pt-24 pb-16">
+      <main className="pt-28 sm:pt-32 pb-16">
         {/* Hero Section */}
         <div className="container mx-auto px-4 lg:px-8 max-w-7xl mb-12">
           <div className="text-center animate-fade-in">
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-primary via-accent to-purple-600 bg-clip-text text-transparent animate-gradient-text">
               Our Global Footprint
             </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-              Delivering innovative water treatment and desalination solutions across 21 countries since 1983
+            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
+              Delivering innovative water treatment and desalination solutions
+              <br />
+              <span className="text-primary font-medium">across 21 countries since 1983</span>
             </p>
           </div>
         </div>

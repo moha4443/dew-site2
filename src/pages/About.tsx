@@ -134,7 +134,7 @@ const About = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-purple-50" />
       </div>
 
-      <main className="pt-24 pb-16">
+      <main className="pt-28 sm:pt-32 pb-16">
         {/* Hero Section with Parallax */}
         <HeroSection mousePosition={mousePosition} />
 
@@ -199,7 +199,7 @@ const HeroSection = ({ mousePosition }: { mousePosition: { x: number; y: number 
 
   return (
     <section ref={ref} className="container mx-auto px-4 lg:px-8 max-w-7xl mb-20">
-      <div className="grid md:grid-cols-2 gap-12 items-center">
+      <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
         {/* Left Column - Text Content */}
         <div
           className="parallax"
@@ -207,29 +207,70 @@ const HeroSection = ({ mousePosition }: { mousePosition: { x: number; y: number 
             transform: `translate(${mousePosition.x * 0.5}px, ${mousePosition.y * 0.5}px)`,
           }}
         >
+          {/* Decorative badge */}
+          <div
+            className={`inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6 ${isVisible ? 'fade-in-up stagger-1' : 'opacity-0'}`}
+          >
+            <span className="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+            <span className="text-sm font-medium text-primary">Since 1983</span>
+          </div>
+
           <h1
-            className={`text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-primary via-accent to-purple-600 bg-clip-text text-transparent animate-gradient-text ${isVisible ? 'fade-in-up stagger-1' : 'opacity-0'
+            className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-primary via-accent to-purple-600 bg-clip-text text-transparent animate-gradient-text leading-tight ${isVisible ? 'fade-in-up stagger-1' : 'opacity-0'
               }`}
           >
             About DEW
           </h1>
+
           <p
-            className={`text-xl md:text-2xl text-muted-foreground mb-6 leading-relaxed ${isVisible ? 'fade-in-up stagger-2' : 'opacity-0'
+            className={`text-lg sm:text-xl md:text-2xl text-foreground/80 mb-8 leading-relaxed font-light ${isVisible ? 'fade-in-up stagger-2' : 'opacity-0'
               }`}
           >
-            DEW (Devise Energy & Water) specialises in integrated solutions that combine water treatment and
+            <span className="font-semibold text-primary">DEW</span> (Devise Energy & Water) specialises in integrated solutions that combine water treatment and
             renewable energy to deliver sustainable, resilient infrastructure.
           </p>
+
           <div
-            className={`glass p-6 rounded-3xl ${isVisible ? 'fade-in-up stagger-3' : 'opacity-0'}`}
+            className={`relative overflow-hidden rounded-3xl ${isVisible ? 'fade-in-up stagger-3' : 'opacity-0'}`}
           >
-            <p className="text-base md:text-lg text-foreground/80 leading-relaxed">
-              Since 1983, DEVISE ENERGY & WATER GmbH (DEW GROUP), operating from Austria, Egypt, Greece, Germany,
-              Morocco and Oman, develops innovative Energy & Water solutions for rural and agricultural
-              developments. With partnerships bringing over 43 years of experience in 21 countries, we drive
-              circular economies by creating the Water-Energy-Food NEXUS (WEF) infrastructure to foster healthy
-              sustainable developments against climate instability and growing nations.
-            </p>
+            {/* Card gradient border */}
+            <div className="absolute inset-0 bg-gradient-to-r from-primary via-accent to-purple-600 rounded-3xl"></div>
+            <div className="relative m-[2px] bg-white/95 backdrop-blur-xl rounded-[22px] p-6 md:p-8">
+              {/* Subtle gradient accent */}
+              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-primary/10 to-transparent rounded-3xl"></div>
+
+              <p className="text-base md:text-lg text-foreground/80 leading-relaxed relative z-10">
+                <span className="font-semibold text-foreground">DEVISE ENERGY & WATER GmbH (DEW GROUP)</span>, operating from
+                <span className="text-primary font-medium"> Austria, Egypt, Greece, Germany, Morocco and Oman</span>, develops innovative
+                Energy & Water solutions for rural and agricultural developments. With partnerships bringing over
+                <span className="font-bold text-accent"> 43 years of experience</span> in
+                <span className="font-bold text-accent"> 21 countries</span>, we drive circular economies by creating the
+                <span className="font-semibold text-primary"> Water-Energy-Food NEXUS (WEF)</span> infrastructure to foster healthy
+                sustainable developments against climate instability and growing nations.
+              </p>
+
+              {/* Stats row */}
+              <div className="flex flex-wrap gap-6 mt-6 pt-6 border-t border-gray-100">
+                <div className="flex items-center gap-2">
+                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                    <span className="text-primary font-bold">43+</span>
+                  </div>
+                  <span className="text-sm text-muted-foreground">Years Experience</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center">
+                    <span className="text-accent font-bold">21</span>
+                  </div>
+                  <span className="text-sm text-muted-foreground">Countries</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-10 h-10 rounded-full bg-purple-500/10 flex items-center justify-center">
+                    <span className="text-purple-600 font-bold">12</span>
+                  </div>
+                  <span className="text-sm text-muted-foreground">Global Offices</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -238,7 +279,7 @@ const HeroSection = ({ mousePosition }: { mousePosition: { x: number; y: number 
           className={`flex justify-center items-center ${isVisible ? 'fade-in-up stagger-2' : 'opacity-0'}`}
         >
           <div className="relative w-full max-w-md">
-            <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-accent/20 rounded-full blur-3xl" />
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-accent/20 rounded-full blur-3xl animate-pulse-slow" />
             <div className="relative">
               <img
                 src="/logo2.jpg"

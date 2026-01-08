@@ -2,30 +2,38 @@ import heroImage from '@/assets/hero-water.jpg';
 
 export const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background image with soft overlay */}
+    <section className="relative min-h-screen flex flex-col justify-end overflow-hidden">
+      {/* Background image - Full visibility */}
       <div className="absolute inset-0">
         <img
           src={heroImage}
           alt="Water technology innovation"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-secondary/70 via-secondary/40 to-background/80" />
       </div>
 
-      {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 lg:px-8 text-center">
-        <div className="max-w-4xl mx-auto space-y-8 animate-fade-in">
-          <p className="text-primary-foreground/90 text-lg md:text-xl font-medium tracking-wider uppercase">
-            A Revolutionary Approach to
-          </p>
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-primary-foreground leading-tight">
-            WATER INNOVATION
-          </h1>
-          <p className="text-xl md:text-2xl text-primary-foreground/90 max-w-3xl mx-auto leading-relaxed">
-            Transforming water management for the world's leading industries through cutting-edge technology and
-            sustainable solutions
-          </p>
+      {/* Subtle bottom gradient only */}
+      <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-slate-900/90 via-slate-900/50 to-transparent" />
+
+      {/* Professional Bottom Bar with Key Message */}
+      <div className="relative z-10 w-full">
+        <div className="bg-slate-900/70 backdrop-blur-md border-t border-white/10">
+          <div className="container mx-auto px-4">
+            <div className="flex items-center justify-center py-6">
+              {/* Left decorative line */}
+              <div className="hidden sm:block flex-1 h-px bg-gradient-to-r from-transparent via-cyan-500/50 to-cyan-500" />
+
+              {/* Main message */}
+              <div className="px-6 sm:px-10 text-center">
+                <h1 className="text-xl sm:text-2xl md:text-3xl font-light text-white tracking-[0.2em] uppercase">
+                  Water <span className="font-semibold text-cyan-400">Innovation</span> Since 1983
+                </h1>
+              </div>
+
+              {/* Right decorative line */}
+              <div className="hidden sm:block flex-1 h-px bg-gradient-to-l from-transparent via-cyan-500/50 to-cyan-500" />
+            </div>
+          </div>
         </div>
       </div>
     </section>
