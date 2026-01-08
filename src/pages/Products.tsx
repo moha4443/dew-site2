@@ -55,7 +55,8 @@ const section1Products = [
         images: [
             '/product/Small - Medium – Large Size MOBILE SOLUTIONS for Seawater Desalination (1)jpg.jpg',
             '/product/Small - Medium – Large Size MOBILE SOLUTIONS for Seawater Desalination (2).jpg',
-            '/product/Small - Medium – Large Size MOBILE SOLUTIONS for Seawater Desalination (3)png.png'
+            '/product/Small - Medium – Large Size MOBILE SOLUTIONS for Seawater Desalination (3)png.png',
+            '/product/Small - Medium – Large Size MOBILE SOLUTIONS for Seawater Desalination 4.jpg'
         ],
         color: 'from-blue-500 to-indigo-600',
         benefits: [
@@ -187,8 +188,8 @@ const section2Products = [
         }
     },
     {
-        id: 'mobile-bio-plant',
-        title: '"Mobile Bio-Plant"',
+        id: 'Mobile Bio-Plant',
+        title: 'Mobile Bio-Plant',
         subtitle: 'Portable MBR Technology',
         icon: Container,
         description: 'A specially designed compact STP utilizing MBR technology that is fully Portable & Mobile. It can be easily disassembled and reassembled at a new location. The system with a treatment capacity of 1,000 m³/d unit occupies less than 150 m² area.',
@@ -209,8 +210,8 @@ const section2Products = [
         }
     },
     {
-        id: 'csdp',
-        title: '"CSDP"',
+        id: 'CSDP',
+        title: 'CSDP',
         subtitle: 'Containerized Sludge Dewatering Plant',
         icon: Recycle,
         description: 'A Modular, Portable system for waste sludge dewatering and management. CSDP provides efficient sludge treatment in a containerized format for easy deployment and operation.',

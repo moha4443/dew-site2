@@ -1,6 +1,18 @@
+import { useState } from 'react';
 import { useLocation, Link } from 'react-router-dom';
+import { useForm } from 'react-hook-form';
 import { Navigation } from '@/components/Navigation';
 import { Footer } from '@/components/Footer';
+import { CheckCircle2, AlertCircle, Loader2 } from 'lucide-react';
+
+interface ContactFormData {
+  fullName: string;
+  company: string;
+  email: string;
+  phone: string;
+  message: string;
+  newsletter: boolean;
+}
 
 const Contact = () => {
   const location = useLocation();
@@ -9,6 +21,49 @@ const Contact = () => {
       typeof (location.state as { email?: string }).email === 'string'
       ? (location.state as { email: string }).email
       : '';
+
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+  const [errorMessage, setErrorMessage] = useState<string>('');
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset
+  } = useForm<ContactFormData>({
+    defaultValues: {
+      email: prefilledEmail,
+      newsletter: false
+    }
+  });
+
+  const onSubmit = async (data: ContactFormData) => {
+    setSubmitStatus('loading');
+    setErrorMessage('');
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.error || 'Failed to submit form');
+      }
+
+      setSubmitStatus('success');
+      reset(); // Clear the form
+    } catch (error) {
+      setSubmitStatus('error');
+      setErrorMessage(error instanceof Error ? error.message : 'An unexpected error occurred');
+    }
+  };
+
   return (
     <div className="min-h-screen relative overflow-hidden">
       {/* Animated Background */}
@@ -41,57 +96,124 @@ const Contact = () => {
           </p>
 
           <div className="bg-white/70 backdrop-blur-xl rounded-xl sm:rounded-2xl border border-blue-100 shadow-xl p-4 sm:p-6 md:p-8 hover:shadow-2xl transition-all duration-300">
-            <form className="space-y-4 sm:space-y-6">
+            {/* Success Message */}
+            {submitStatus === 'success' && (
+              <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg flex items-start gap-3">
+                <CheckCircle2 className="w-6 h-6 text-green-600 flex-shrink-0 mt-0.5" />
+                <div>
+                  <h3 className="font-semibold text-green-800">Thank you for your enquiry!</h3>
+                  <p className="text-green-700 text-sm mt-1">
+                    We've received your message and will get back to you within 24-48 hours.
+                  </p>
+                </div>
+              </div>
+            )}
+
+            {/* Error Message */}
+            {submitStatus === 'error' && (
+              <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg flex items-start gap-3">
+                <AlertCircle className="w-6 h-6 text-red-600 flex-shrink-0 mt-0.5" />
+                <div>
+                  <h3 className="font-semibold text-red-800">Submission Failed</h3>
+                  <p className="text-red-700 text-sm mt-1">
+                    {errorMessage || 'Something went wrong. Please try again later.'}
+                  </p>
+                </div>
+              </div>
+            )}
+
+            <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 sm:space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-sm sm:text-base mb-1 font-medium text-gray-700">Full name</label>
+                  <label className="block text-sm sm:text-base mb-1 font-medium text-gray-700">
+                    Full name <span className="text-red-500">*</span>
+                  </label>
                   <input
-                    className="mobile-input border border-blue-200 bg-white/50 backdrop-blur-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                    {...register('fullName', {
+                      required: 'Full name is required',
+                      minLength: { value: 2, message: 'Name must be at least 2 characters' }
+                    })}
+                    className={`mobile-input border ${errors.fullName ? 'border-red-400' : 'border-blue-200'} bg-white/50 backdrop-blur-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all`}
                     placeholder="Full name"
                     type="text"
+                    disabled={submitStatus === 'loading'}
                   />
+                  {errors.fullName && (
+                    <p className="mt-1 text-sm text-red-500">{errors.fullName.message}</p>
+                  )}
                 </div>
                 <div>
                   <label className="block text-sm sm:text-base mb-1 font-medium text-gray-700">Company</label>
                   <input
+                    {...register('company')}
                     className="mobile-input border border-blue-200 bg-white/50 backdrop-blur-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
                     placeholder="Company"
                     type="text"
+                    disabled={submitStatus === 'loading'}
                   />
                 </div>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-sm sm:text-base mb-1 font-medium text-gray-700">Email</label>
+                  <label className="block text-sm sm:text-base mb-1 font-medium text-gray-700">
+                    Email <span className="text-red-500">*</span>
+                  </label>
                   <input
-                    className="mobile-input border border-blue-200 bg-white/50 backdrop-blur-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                    {...register('email', {
+                      required: 'Email is required',
+                      pattern: {
+                        value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                        message: 'Please enter a valid email address'
+                      }
+                    })}
+                    className={`mobile-input border ${errors.email ? 'border-red-400' : 'border-blue-200'} bg-white/50 backdrop-blur-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all`}
                     placeholder="Email"
                     type="email"
-                    defaultValue={prefilledEmail}
+                    disabled={submitStatus === 'loading'}
                   />
+                  {errors.email && (
+                    <p className="mt-1 text-sm text-red-500">{errors.email.message}</p>
+                  )}
                 </div>
                 <div>
                   <label className="block text-sm sm:text-base mb-1 font-medium text-gray-700">Phone</label>
                   <input
+                    {...register('phone')}
                     className="mobile-input border border-blue-200 bg-white/50 backdrop-blur-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
                     placeholder="Phone"
                     type="tel"
+                    disabled={submitStatus === 'loading'}
                   />
                 </div>
               </div>
 
               <div>
-                <label className="block text-sm sm:text-base mb-1 font-medium text-gray-700">Message</label>
+                <label className="block text-sm sm:text-base mb-1 font-medium text-gray-700">
+                  Message <span className="text-red-500">*</span>
+                </label>
                 <textarea
-                  className="mobile-textarea border border-blue-200 bg-white/50 backdrop-blur-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all resize-none"
-                  placeholder="Message"
+                  {...register('message', {
+                    required: 'Message is required',
+                    minLength: { value: 10, message: 'Message must be at least 10 characters' }
+                  })}
+                  className={`mobile-textarea border ${errors.message ? 'border-red-400' : 'border-blue-200'} bg-white/50 backdrop-blur-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all resize-none`}
+                  placeholder="Tell us about your project or question..."
+                  disabled={submitStatus === 'loading'}
                 ></textarea>
+                {errors.message && (
+                  <p className="mt-1 text-sm text-red-500">{errors.message.message}</p>
+                )}
               </div>
 
               <div className="space-y-3 sm:space-y-4 text-sm sm:text-base text-muted-foreground">
                 <label className="flex items-start gap-2 sm:gap-3 cursor-pointer hover:text-foreground transition-colors">
-                  <input type="checkbox" className="mt-1 accent-blue-600 touch-target" />
+                  <input
+                    {...register('newsletter')}
+                    type="checkbox"
+                    className="mt-1 accent-blue-600 touch-target"
+                    disabled={submitStatus === 'loading'}
+                  />
                   <span className="text-sm">
                     I agree to receive communications including updates and newsletters. I understand that I can
                     unsubscribe at any time.
@@ -103,10 +225,18 @@ const Contact = () => {
                     By submitting you agree to our <Link to="/privacy-policy" className="underline text-blue-600 hover:text-blue-700">Privacy Policy</Link>.
                   </div>
                   <button
-                    type="button"
-                    className="mobile-button bg-gradient-to-r from-blue-600 to-cyan-600 text-white hover:from-blue-700 hover:to-cyan-700 font-medium shadow-lg hover:shadow-xl transition-all duration-300 mobile-touch-feedback w-full sm:w-auto"
+                    type="submit"
+                    disabled={submitStatus === 'loading'}
+                    className="mobile-button bg-gradient-to-r from-blue-600 to-cyan-600 text-white hover:from-blue-700 hover:to-cyan-700 font-medium shadow-lg hover:shadow-xl transition-all duration-300 mobile-touch-feedback w-full sm:w-auto disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                   >
-                    Send enquiry
+                    {submitStatus === 'loading' ? (
+                      <>
+                        <Loader2 className="w-5 h-5 animate-spin" />
+                        Sending...
+                      </>
+                    ) : (
+                      'Send enquiry'
+                    )}
                   </button>
                 </div>
               </div>
