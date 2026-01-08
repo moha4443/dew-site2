@@ -33,8 +33,38 @@ const countryCoordinates: Record<string, { lat: number; lng: number; name: strin
   'Morocco': { lat: 33.9716, lng: -6.8498, name: 'Morocco' },
   'United Kingdom': { lat: 51.5074, lng: -0.1278, name: 'United Kingdom' },
   'Canada': { lat: 56.1304, lng: -106.3468, name: 'Canada' },
-  'Greece / Romania': { lat: 40.0, lng: 25.0, name: 'Greece / Romania' }
+  'Greece / Romania': { lat: 40.0, lng: 25.0, name: 'Greece / Romania' },
+  'Austria': { lat: 48.2082, lng: 16.3738, name: 'Austria' },
+  'Germany': { lat: 52.5200, lng: 13.4050, name: 'Germany' },
+  'Kenya': { lat: -1.2921, lng: 36.8219, name: 'Kenya' },
+  'Serbia': { lat: 44.7866, lng: 20.4489, name: 'Serbia' },
+  'Cyprus': { lat: 35.1264, lng: 33.4299, name: 'Cyprus' },
+  'Slovakia': { lat: 48.1486, lng: 17.1077, name: 'Slovakia' }
 };
+
+// Offices & Sales Points (12 locations) - RED markers
+const officeLocations = [
+  { country: 'Austria', city: 'Vienna', lat: 48.2082, lng: 16.3738 },
+  { country: 'Egypt', city: 'Cairo', lat: 30.0444, lng: 31.2357 },
+  { country: 'Ethiopia', city: 'Addis Ababa', lat: 9.0320, lng: 38.7469 },
+  { country: 'Germany', city: 'Berlin', lat: 52.5200, lng: 13.4050 },
+  { country: 'Greece', city: 'Athens', lat: 37.9838, lng: 23.7275 },
+  { country: 'Kenya', city: 'Nairobi', lat: -1.2921, lng: 36.8219 },
+  { country: 'Morocco', city: 'Casablanca', lat: 33.5731, lng: -7.5898 },
+  { country: 'Oman', city: 'Muscat', lat: 23.5880, lng: 58.3829 },
+  { country: 'Poland', city: 'Warsaw', lat: 52.2297, lng: 21.0122 },
+  { country: 'Qatar', city: 'Doha', lat: 25.2854, lng: 51.5310 },
+  { country: 'Romania', city: 'Bucharest', lat: 44.4268, lng: 26.1025 },
+  { country: 'Serbia', city: 'Belgrade', lat: 44.7866, lng: 20.4489 }
+];
+
+// Factories (3 locations) - GREEN markers
+const factoryLocations = [
+  { country: 'Egypt', city: 'Cairo', lat: 30.1, lng: 31.3 },
+  { country: 'Greece', city: 'Athens', lat: 38.05, lng: 23.8 },
+  { country: 'Oman', city: 'Muscat', lat: 23.65, lng: 58.45 }
+];
+
 
 // City coordinates for detailed zoom view
 const cityCoordinates: Record<string, { lat: number; lng: number }> = {
@@ -396,6 +426,89 @@ export default function AllProjectsMap() {
         cityMarkers.push(cityMarker);
       });
 
+      // Create OFFICE markers (RED) - Always visible
+      officeLocations.forEach((office) => {
+        const officeMarkerHtml = `
+          <div class="office-marker">
+            <div class="office-marker-pulse"></div>
+            <div class="office-marker-content">
+              <div class="office-marker-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" fill="url(#office-gradient-${office.country.replace(/\s/g, '')})"/>
+                  <circle cx="12" cy="9" r="3" fill="white"/>
+                  <defs>
+                    <linearGradient id="office-gradient-${office.country.replace(/\s/g, '')}" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" style="stop-color:#ef4444;stop-opacity:1" />
+                      <stop offset="100%" style="stop-color:#dc2626;stop-opacity:1" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+            </div>
+          </div>
+        `;
+
+        const officeIcon = L.divIcon({
+          className: 'custom-office-marker',
+          html: officeMarkerHtml,
+          iconSize: [30, 30],
+          iconAnchor: [15, 30],
+          popupAnchor: [0, -30]
+        });
+
+        // Offset slightly to avoid overlap with project markers
+        const offsetLat = office.lat + 0.5;
+        const offsetLng = office.lng + 0.5;
+
+        const officeMarker = L.marker([offsetLat, offsetLng], { icon: officeIcon }).addTo(map);
+        officeMarker.bindTooltip(
+          `<div class="map-tooltip office-tooltip">
+            <strong>🏢 Office / Sales Point</strong><br/>
+            ${office.city}, ${office.country}
+          </div>`,
+          { direction: 'top', offset: [0, -30], opacity: 0.95 }
+        );
+      });
+
+      // Create FACTORY markers (GREEN) - Always visible
+      factoryLocations.forEach((factory) => {
+        const factoryMarkerHtml = `
+          <div class="factory-marker">
+            <div class="factory-marker-pulse"></div>
+            <div class="factory-marker-content">
+              <div class="factory-marker-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" fill="url(#factory-gradient-${factory.country.replace(/\s/g, '')})"/>
+                  <path d="M9 8h6v3H9z" fill="white"/>
+                  <defs>
+                    <linearGradient id="factory-gradient-${factory.country.replace(/\s/g, '')}" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" style="stop-color:#22c55e;stop-opacity:1" />
+                      <stop offset="100%" style="stop-color:#16a34a;stop-opacity:1" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+            </div>
+          </div>
+        `;
+
+        const factoryIcon = L.divIcon({
+          className: 'custom-factory-marker',
+          html: factoryMarkerHtml,
+          iconSize: [35, 35],
+          iconAnchor: [17, 35],
+          popupAnchor: [0, -35]
+        });
+
+        const factoryMarker = L.marker([factory.lat, factory.lng], { icon: factoryIcon }).addTo(map);
+        factoryMarker.bindTooltip(
+          `<div class="map-tooltip factory-tooltip">
+            <strong>🏭 Factory</strong><br/>
+            ${factory.city}, ${factory.country}
+          </div>`,
+          { direction: 'top', offset: [0, -35], opacity: 0.95 }
+        );
+      });
 
       // Function to update marker visibility based on zoom level
       const updateMarkerVisibility = () => {
@@ -692,6 +805,117 @@ export default function AllProjectsMap() {
           box-shadow: 0 2px 8px rgba(14, 165, 233, 0.3);
         }
 
+        /* Office Marker Styles (RED) */
+        .custom-office-marker {
+          background: none;
+          border: none;
+        }
+
+        .office-marker {
+          position: relative;
+          width: 30px;
+          height: 30px;
+          cursor: pointer;
+        }
+
+        .office-marker-pulse {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 40px;
+          height: 40px;
+          background: rgba(239, 68, 68, 0.3);
+          border-radius: 50%;
+          animation: officePulse 2s infinite;
+        }
+
+        @keyframes officePulse {
+          0% {
+            transform: translate(-50%, -50%) scale(0.8);
+            opacity: 1;
+          }
+          100% {
+            transform: translate(-50%, -50%) scale(2);
+            opacity: 0;
+          }
+        }
+
+        .office-marker-content {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          transition: transform 0.3s ease;
+        }
+
+        .office-marker:hover .office-marker-content {
+          transform: scale(1.2);
+        }
+
+        .office-marker-icon {
+          filter: drop-shadow(0 4px 8px rgba(239, 68, 68, 0.5));
+        }
+
+        .office-tooltip {
+          border-color: #ef4444 !important;
+        }
+
+        /* Factory Marker Styles (GREEN) */
+        .custom-factory-marker {
+          background: none;
+          border: none;
+        }
+
+        .factory-marker {
+          position: relative;
+          width: 35px;
+          height: 35px;
+          cursor: pointer;
+        }
+
+        .factory-marker-pulse {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 50px;
+          height: 50px;
+          background: rgba(34, 197, 94, 0.3);
+          border-radius: 50%;
+          animation: factoryPulse 2s infinite;
+        }
+
+        @keyframes factoryPulse {
+          0% {
+            transform: translate(-50%, -50%) scale(0.8);
+            opacity: 1;
+          }
+          100% {
+            transform: translate(-50%, -50%) scale(2);
+            opacity: 0;
+          }
+        }
+
+        .factory-marker-content {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          transition: transform 0.3s ease;
+        }
+
+        .factory-marker:hover .factory-marker-content {
+          transform: scale(1.2);
+        }
+
+        .factory-marker-icon {
+          filter: drop-shadow(0 4px 10px rgba(34, 197, 94, 0.5));
+        }
+
+        .factory-tooltip {
+          border-color: #22c55e !important;
+        }
 
         .country-modal-overlay {
           position: fixed;
@@ -910,6 +1134,35 @@ export default function AllProjectsMap() {
       {/* Map */}
       <div className="map-wrapper">
         <div ref={mapRef} id="map" />
+
+        {/* Legend */}
+        <div style={{
+          position: 'absolute',
+          bottom: '20px',
+          left: '20px',
+          zIndex: 1000,
+          background: 'white',
+          padding: '16px 20px',
+          borderRadius: '12px',
+          boxShadow: '0 4px 20px rgba(0,0,0,0.15)',
+          border: '2px solid #e0f2fe'
+        }}>
+          <h4 style={{ margin: '0 0 12px 0', fontWeight: 700, fontSize: '14px', color: '#0f172a' }}>Legend</h4>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+              <div style={{ width: '16px', height: '16px', borderRadius: '50%', background: 'linear-gradient(135deg, #0ea5e9, #0284c7)', boxShadow: '0 2px 6px rgba(14, 165, 233, 0.4)' }}></div>
+              <span style={{ fontSize: '13px', color: '#475569', fontWeight: 500 }}>Projects (21 Countries)</span>
+            </div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+              <div style={{ width: '16px', height: '16px', borderRadius: '50%', background: 'linear-gradient(135deg, #ef4444, #dc2626)', boxShadow: '0 2px 6px rgba(239, 68, 68, 0.4)' }}></div>
+              <span style={{ fontSize: '13px', color: '#475569', fontWeight: 500 }}>Offices & Sales Points (12)</span>
+            </div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+              <div style={{ width: '16px', height: '16px', borderRadius: '50%', background: 'linear-gradient(135deg, #22c55e, #16a34a)', boxShadow: '0 2px 6px rgba(34, 197, 94, 0.4)' }}></div>
+              <span style={{ fontSize: '13px', color: '#475569', fontWeight: 500 }}>Factories (3)</span>
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* Country Projects Modal */}

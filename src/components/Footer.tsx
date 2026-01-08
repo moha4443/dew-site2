@@ -9,7 +9,7 @@ export const Footer = () => {
           {/* Brand */}
           <div className="space-y-3 sm:space-y-4">
             <span className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-primary-glow to-accent bg-clip-text text-transparent">
-              DEW - Devise Energy &amp; Water
+              DEVISE ENERGY &amp; WATER
             </span>
             <p className="text-sm sm:text-base text-secondary-foreground/80 leading-relaxed">
               Delivering resilient water &amp; energy infrastructure through integrated treatment and renewable
@@ -54,7 +54,7 @@ export const Footer = () => {
 
         <div className="pt-6 sm:pt-8 border-t border-secondary-foreground/20 flex flex-col md:flex-row justify-between items-center gap-3 sm:gap-4 text-center md:text-left">
           <p className="text-secondary-foreground/70 text-xs sm:text-sm">
-            © {new Date().getFullYear()} DEW - Devise Energy &amp; Water. All rights reserved.
+            © {new Date().getFullYear()} DEVISE ENERGY & WATER. All rights reserved.
           </p>
           <div className="flex flex-wrap justify-center gap-4 sm:gap-6 text-xs sm:text-sm">
             <Link to="/privacy-policy" className="text-secondary-foreground/70 hover:text-primary-foreground transition-colors touch-target mobile-touch-feedback">

@@ -5,11 +5,11 @@ import { AnimatedNumber } from './AnimatedNumber';
 
 export const FeaturesSection = () => {
   const [statsVisible, setStatsVisible] = useState(false);
-  const [videoVisible, setVideoVisible] = useState(false);
+
   const [missionVisible, setMissionVisible] = useState(false);
 
   const statsRef = useRef<HTMLDivElement>(null);
-  const videoRef = useRef<HTMLDivElement>(null);
+
   const missionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -19,9 +19,7 @@ export const FeaturesSection = () => {
           if (entry.target === statsRef.current && entry.isIntersecting) {
             setStatsVisible(true);
           }
-          if (entry.target === videoRef.current && entry.isIntersecting) {
-            setVideoVisible(true);
-          }
+
           if (entry.target === missionRef.current && entry.isIntersecting) {
             setMissionVisible(true);
           }
@@ -31,7 +29,7 @@ export const FeaturesSection = () => {
     );
 
     if (statsRef.current) observer.observe(statsRef.current);
-    if (videoRef.current) observer.observe(videoRef.current);
+
     if (missionRef.current) observer.observe(missionRef.current);
 
     return () => {
@@ -108,29 +106,6 @@ export const FeaturesSection = () => {
           ))}
         </div>
 
-        {/* Video Section */}
-        <div
-          ref={videoRef}
-          className={`mb-20 transition-all duration-700 ${videoVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
-            }`}
-        >
-          <div className="text-center mb-8">
-            <h3 className="text-3xl md:text-4xl font-bold mb-4">
-              See Our Solutions in Action
-            </h3>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Discover how DEW delivers innovative water treatment systems across diverse industries and challenging environments
-            </p>
-          </div>
-          <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-border bg-black max-w-5xl mx-auto">
-            <video
-              src="/video.mov"
-              className="w-full h-full object-cover"
-              controls
-              playsInline
-            />
-          </div>
-        </div>
 
         {/* Mission Section */}
         <div

@@ -238,8 +238,8 @@ const HeroSection = ({ mousePosition }: { mousePosition: { x: number; y: number 
           className={`flex justify-center items-center ${isVisible ? 'fade-in-up stagger-2' : 'opacity-0'}`}
         >
           <div className="relative w-full max-w-md">
-            <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-accent/20 rounded-full blur-3xl animate-pulse" />
-            <div className="relative image-zoom card-3d">
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-accent/20 rounded-full blur-3xl" />
+            <div className="relative">
               <img
                 src="/logo2.jpg"
                 alt="43 Years of Innovation"
@@ -265,7 +265,7 @@ const ImagesSection = () => {
         <h2 className="text-3xl md:text-5xl font-bold bg-gradient-to-r from-primary via-accent to-purple-600 bg-clip-text text-transparent text-center max-w-4xl">
           Trusted by Leading Corporations, SMEs, and Government Entities
         </h2>
-        <div className="image-zoom w-full max-w-5xl">
+        <div className="w-full max-w-5xl">
           <img
             src="/logo3.jpg"
             alt="Logos of trusted DEW partners and clients"
