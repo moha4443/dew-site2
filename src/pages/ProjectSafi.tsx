@@ -3,7 +3,7 @@ import { Navigation } from '@/components/Navigation';
 import { Footer } from '@/components/Footer';
 
 const ProjectSafi = () => {
-  const images = Array.from({ length: 20 }, (_, i) => `/project/${i + 1}.jpg`);
+  const images = Array.from({ length: 15 }, (_, i) => `/project/${i + 1}.jpg`);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   return (
@@ -25,7 +25,7 @@ const ProjectSafi = () => {
               <h1 className="text-3xl font-bold mb-2">SAFI mobile desalination</h1>
               <p className="text-sm text-muted-foreground mb-1">Morocco • 140 m³/day</p>
               <p className="text-xs text-muted-foreground">
-                Slides arranged from 1 to 20 below
+                Slides arranged from 1 to 15 below
               </p>
             </div>
 

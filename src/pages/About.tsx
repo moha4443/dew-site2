@@ -198,95 +198,61 @@ const HeroSection = ({ mousePosition }: { mousePosition: { x: number; y: number 
   const { ref, isVisible } = useScrollReveal({ threshold: 0.1 });
 
   return (
-    <section ref={ref} className="container mx-auto px-4 lg:px-8 max-w-7xl mb-20">
-      <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
-        {/* Left Column - Text Content */}
-        <div
-          className="parallax"
-          style={{
-            transform: `translate(${mousePosition.x * 0.5}px, ${mousePosition.y * 0.5}px)`,
-          }}
-        >
-          {/* Decorative badge */}
-          <div
-            className={`inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6 ${isVisible ? 'fade-in-up stagger-1' : 'opacity-0'}`}
-          >
-            <span className="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
-            <span className="text-sm font-medium text-primary">Since 1983</span>
+    <section ref={ref} className="container mx-auto px-4 lg:px-8 max-w-6xl mb-20">
+      {/* Centered Hero Content */}
+      <div className="text-center">
+        {/* Badge */}
+        <div className={`inline-flex items-center gap-2 px-5 py-2 rounded-full bg-[#1a237e]/10 mb-6 ${isVisible ? 'fade-in-up' : 'opacity-0'}`}>
+          <span className="w-2 h-2 rounded-full bg-[#0891b2] animate-pulse"></span>
+          <span className="text-sm font-semibold text-[#1a237e]">SINCE 1983</span>
+        </div>
+
+        {/* Main Title */}
+        <h1 className={`text-5xl sm:text-6xl md:text-7xl font-bold mb-6 text-[#1a237e] ${isVisible ? 'fade-in-up' : 'opacity-0'}`}>
+          About <span className="text-[#0891b2]">DEW</span>
+        </h1>
+
+        {/* Main Description */}
+        <p className={`text-xl md:text-2xl text-gray-600 mb-12 leading-relaxed max-w-3xl mx-auto ${isVisible ? 'fade-in-up' : 'opacity-0'}`}>
+          <span className="font-semibold text-[#1a237e]">DEW</span> (Devise Energy & Water) specialises in integrated solutions that combine water treatment and renewable energy to deliver sustainable, resilient infrastructure.
+        </p>
+
+        {/* Stats Row */}
+        <div className={`grid grid-cols-3 gap-6 md:gap-12 mb-16 max-w-3xl mx-auto ${isVisible ? 'fade-in-up' : 'opacity-0'}`}>
+          <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
+            <span className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#1a237e]">43+</span>
+            <p className="text-sm md:text-base text-gray-500 mt-2">Years Experience</p>
           </div>
-
-          <h1
-            className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-primary via-accent to-purple-600 bg-clip-text text-transparent animate-gradient-text leading-tight ${isVisible ? 'fade-in-up stagger-1' : 'opacity-0'
-              }`}
-          >
-            About DEW
-          </h1>
-
-          <p
-            className={`text-lg sm:text-xl md:text-2xl text-foreground/80 mb-8 leading-relaxed font-light ${isVisible ? 'fade-in-up stagger-2' : 'opacity-0'
-              }`}
-          >
-            <span className="font-semibold text-primary">DEW</span> (Devise Energy & Water) specialises in integrated solutions that combine water treatment and
-            renewable energy to deliver sustainable, resilient infrastructure.
-          </p>
-
-          <div
-            className={`relative overflow-hidden rounded-3xl ${isVisible ? 'fade-in-up stagger-3' : 'opacity-0'}`}
-          >
-            {/* Card gradient border */}
-            <div className="absolute inset-0 bg-gradient-to-r from-primary via-accent to-purple-600 rounded-3xl"></div>
-            <div className="relative m-[2px] bg-white/95 backdrop-blur-xl rounded-[22px] p-6 md:p-8">
-              {/* Subtle gradient accent */}
-              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-primary/10 to-transparent rounded-3xl"></div>
-
-              <p className="text-base md:text-lg text-foreground/80 leading-relaxed relative z-10">
-                <span className="font-semibold text-foreground">DEVISE ENERGY & WATER GmbH (DEW GROUP)</span>, operating from
-                <span className="text-primary font-medium"> Austria, Egypt, Greece, Germany, Morocco and Oman</span>, develops innovative
-                Energy & Water solutions for rural and agricultural developments. With partnerships bringing over
-                <span className="font-bold text-accent"> 43 years of experience</span> in
-                <span className="font-bold text-accent"> 21 countries</span>, we drive circular economies by creating the
-                <span className="font-semibold text-primary"> Water-Energy-Food NEXUS (WEF)</span> infrastructure to foster healthy
-                sustainable developments against climate instability and growing nations.
-              </p>
-
-              {/* Stats row */}
-              <div className="flex flex-wrap gap-6 mt-6 pt-6 border-t border-gray-100">
-                <div className="flex items-center gap-2">
-                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
-                    <span className="text-primary font-bold">43+</span>
-                  </div>
-                  <span className="text-sm text-muted-foreground">Years Experience</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center">
-                    <span className="text-accent font-bold">21</span>
-                  </div>
-                  <span className="text-sm text-muted-foreground">Countries</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="w-10 h-10 rounded-full bg-purple-500/10 flex items-center justify-center">
-                    <span className="text-purple-600 font-bold">12</span>
-                  </div>
-                  <span className="text-sm text-muted-foreground">Global Offices</span>
-                </div>
-              </div>
-            </div>
+          <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
+            <span className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#0891b2]">21</span>
+            <p className="text-sm md:text-base text-gray-500 mt-2">Countries</p>
+          </div>
+          <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
+            <span className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#06b6d4]">12</span>
+            <p className="text-sm md:text-base text-gray-500 mt-2">Global Offices</p>
           </div>
         </div>
 
-        {/* Right Column - 43 Years Image */}
-        <div
-          className={`flex justify-center items-center ${isVisible ? 'fade-in-up stagger-2' : 'opacity-0'}`}
-        >
-          <div className="relative w-full max-w-md">
-            <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-accent/20 rounded-full blur-3xl animate-pulse-slow" />
-            <div className="relative">
-              <img
-                src="/logo2.jpg"
-                alt="43 Years of Innovation"
-                className="w-full h-auto rounded-3xl shadow-2xl object-contain"
-              />
-            </div>
+        {/* Company Description Card */}
+        <div className={`bg-white rounded-3xl p-8 md:p-10 shadow-xl border border-gray-100 max-w-4xl mx-auto ${isVisible ? 'fade-in-up' : 'opacity-0'}`}>
+          <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
+            <span className="font-bold text-[#1a237e]">DEVISE ENERGY & WATER GmbH (DEW GROUP)</span>, operating from
+            <span className="font-semibold text-[#0891b2]"> Austria, Egypt, Greece, Germany, Morocco and Oman</span>, develops innovative Energy & Water solutions for rural and agricultural developments. With partnerships bringing over
+            <span className="font-bold text-[#1a237e]"> 43 years of experience</span> in
+            <span className="font-bold text-[#1a237e]"> 21 countries</span>, we drive circular economies by creating the
+            <span className="font-bold text-[#0891b2]"> Water-Energy-Food NEXUS (WEF)</span> infrastructure to foster healthy sustainable developments against climate instability and growing nations.
+          </p>
+
+          {/* Location Tags */}
+          <div className="flex flex-wrap justify-center gap-3 mt-8 pt-6 border-t border-gray-200">
+            {['Austria', 'Egypt', 'Greece', 'Germany', 'Morocco', 'Oman'].map((country) => (
+              <span
+                key={country}
+                className="px-4 py-2 bg-gray-50 rounded-full text-sm font-medium text-[#1a237e] border border-gray-200 hover:bg-[#0891b2] hover:text-white hover:border-[#0891b2] transition-all duration-300 cursor-default"
+              >
+                {country}
+              </span>
+            ))}
           </div>
         </div>
       </div>

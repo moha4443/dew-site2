@@ -262,6 +262,15 @@ const EmbeddedMap = () => {
           box-shadow: 0 4px 15px rgba(0,0,0,0.15) !important;
         }
 
+        .leaflet-container {
+          z-index: 0 !important;
+        }
+
+        .leaflet-pane,
+        .leaflet-control {
+          z-index: 0 !important;
+        }
+
         .country-modal-embed {
           position: fixed;
           inset: 0;
@@ -287,10 +296,10 @@ const EmbeddedMap = () => {
 
       <div className="relative">
         {/* Map Container */}
-        <div ref={mapRef} className="w-full h-[500px] md:h-[600px] rounded-3xl overflow-hidden shadow-2xl" />
+        <div ref={mapRef} className="w-full h-[500px] md:h-[600px] rounded-3xl overflow-hidden shadow-2xl relative z-0" />
 
         {/* Legend */}
-        <div className="absolute bottom-4 left-4 z-[1000] bg-white/95 backdrop-blur-sm p-4 rounded-xl shadow-lg border border-slate-200">
+        <div className="absolute bottom-4 left-4 z-10 bg-white/95 backdrop-blur-sm p-4 rounded-xl shadow-lg border border-slate-200">
           <h4 className="font-bold text-sm text-slate-800 mb-3">Legend</h4>
           <div className="space-y-2 text-sm">
             <div className="flex items-center gap-2">
@@ -309,7 +318,7 @@ const EmbeddedMap = () => {
         </div>
 
         {/* Stats Overlay */}
-        <div className="absolute top-4 right-4 z-[1000] bg-white/95 backdrop-blur-sm p-4 rounded-xl shadow-lg border border-slate-200">
+        <div className="absolute top-4 right-4 z-10 bg-white/95 backdrop-blur-sm p-4 rounded-xl shadow-lg border border-slate-200">
           <div className="text-center mb-3 pb-3 border-b border-slate-200">
             <div className="text-xl font-bold text-primary">567,748</div>
             <div className="text-[10px] text-slate-500 leading-tight">m³/day Water Treatment<br />& Desalination</div>

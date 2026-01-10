@@ -7,7 +7,7 @@ export const Navigation = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     return (
-        <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-lg border-b border-border mobile-safe-area-top">
+        <nav className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-border mobile-safe-area-top">
             <div className="mobile-container mx-auto">
                 <div className="flex items-center justify-between h-20 sm:h-24">
                     {/* Logo */}
@@ -15,7 +15,7 @@ export const Navigation = () => {
                         <img
                             src="/logo.jpg"
                             alt="DEW logo"
-                            className="h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16 lg:h-[72px] lg:w-[72px] rounded-full object-contain bg-background shadow-md"
+                            className="h-16 w-auto sm:h-20 md:h-24 lg:h-[96px] object-contain"
                         />
                         <span className="text-base sm:text-xl md:text-2xl lg:text-3xl font-bold text-[#1a237e] line-clamp-2 sm:line-clamp-1">
                             DEVISE ENERGY &amp; WATER
@@ -39,11 +39,11 @@ export const Navigation = () => {
                         <Link to="/projects" className="text-foreground hover:text-primary transition-colors font-medium">
                             Projects
                         </Link>
-                        <Link to="/contact" className="text-foreground hover:text-primary transition-colors font-medium">
-                            Contact
-                        </Link>
                         <Link to="/why" className="text-foreground hover:text-primary transition-colors font-medium">
                             Why Us
+                        </Link>
+                        <Link to="/contact" className="text-foreground hover:text-primary transition-colors font-medium">
+                            Contact
                         </Link>
                     </div>
 
@@ -106,18 +106,18 @@ export const Navigation = () => {
                                     Projects
                                 </Link>
                                 <Link
-                                    to="/contact"
-                                    className="block px-4 py-3 text-base font-medium text-foreground hover:text-primary hover:bg-muted rounded-lg transition-colors mobile-touch-feedback"
-                                    onClick={() => setIsMenuOpen(false)}
-                                >
-                                    Contact
-                                </Link>
-                                <Link
                                     to="/why"
                                     className="block px-4 py-3 text-base font-medium text-foreground hover:text-primary hover:bg-muted rounded-lg transition-colors mobile-touch-feedback"
                                     onClick={() => setIsMenuOpen(false)}
                                 >
                                     Why Us
+                                </Link>
+                                <Link
+                                    to="/contact"
+                                    className="block px-4 py-3 text-base font-medium text-foreground hover:text-primary hover:bg-muted rounded-lg transition-colors mobile-touch-feedback"
+                                    onClick={() => setIsMenuOpen(false)}
+                                >
+                                    Contact
                                 </Link>
                                 <div className="pt-4">
                                     <Button

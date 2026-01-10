@@ -2,31 +2,30 @@ import heroImage from '@/assets/hero-water.jpg';
 
 export const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex flex-col justify-end overflow-hidden">
-      {/* Background image - Full visibility */}
-      <div className="absolute inset-0">
+    <section className="relative flex flex-col justify-end overflow-hidden">
+      {/* Background image - Responsive: contain on mobile, cover on desktop */}
+      <div className="relative w-full">
         <img
           src={heroImage}
           alt="Water technology innovation"
-          className="w-full h-full object-cover"
+          className="w-full h-auto object-contain"
         />
+        {/* Gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent" />
       </div>
 
-      {/* Subtle bottom gradient only */}
-      <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-slate-900/90 via-slate-900/50 to-transparent" />
-
       {/* Professional Bottom Bar with Key Message */}
-      <div className="relative z-10 w-full">
-        <div className="bg-slate-900/70 backdrop-blur-md border-t border-white/10">
+      <div className="relative z-10 w-full -mt-16 sm:-mt-20">
+        <div className="bg-slate-900/90 sm:bg-slate-900/80 backdrop-blur-md border-t border-white/10">
           <div className="container mx-auto px-4">
-            <div className="flex items-center justify-center py-6">
+            <div className="flex items-center justify-center py-4 sm:py-6">
               {/* Left decorative line */}
               <div className="hidden sm:block flex-1 h-px bg-gradient-to-r from-transparent via-cyan-500/50 to-cyan-500" />
 
               {/* Main message */}
-              <div className="px-6 sm:px-10 text-center">
-                <h1 className="text-xl sm:text-2xl md:text-3xl font-light text-white tracking-[0.2em] uppercase">
-                  Water <span className="font-semibold text-cyan-400">Innovation</span> Since 1983
+              <div className="px-4 sm:px-10 text-center">
+                <h1 className="text-lg sm:text-2xl md:text-3xl font-light text-white tracking-[0.15em] sm:tracking-[0.2em] uppercase">
+                  Water <span className="font-semibold text-cyan-400">Innovations</span> Since 1983
                 </h1>
               </div>
 

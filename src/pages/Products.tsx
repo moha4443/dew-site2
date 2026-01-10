@@ -31,7 +31,7 @@ const section1Products = [
         title: 'Turn-Key & BOO Projects Worldwide',
         subtitle: 'Desalination',
         icon: Globe,
-        description: 'DEW has developed unique contracting solutions utilizing the pre-engineered, prefabricated concept which minimizes the requirement for "heavy on-site presence" for the execution of projects. Through the "Smart-Packaged Solutions" technique, DEW can implement larger municipal and BOO projects for desalination with some reliable "local-support".',
+        description: 'DEW utilizes pre-engineered, prefabricated concepts for "Smart-Packaged Solutions" to implement larger municipal and BOO projects for desalination with reliable "local-support", minimizing heavy on-site presence.',
         images: [
             '/product/TURN-KEY & BOO PROJECTS WORLDWIDE(1).jpg',
             '/product/TURN-KEY & BOO PROJECTS WORLDWIDE(2).jpg',
@@ -39,11 +39,11 @@ const section1Products = [
         ],
         color: 'from-blue-600 to-cyan-500',
         benefits: [
-            'Increases market penetration',
-            'Provides reliable and quick solutions to territories in Mediterranean, Middle East & Africa regions',
-            'Brings value to Local Operators and stable Cashflows'
+            'Increases market penetration in Mediterranean, Middle East & Africa regions',
+            'Brings value and stable cashflows to Local Operators',
+            'Minimizes heavy on-site presence'
         ],
-        status: 'EU campaign started, closing projects starting with GREECE',
+        status: 'EU campaign started (beginning with Greece)',
         specs: null
     },
     {
@@ -107,7 +107,7 @@ const section2Products = [
         title: 'Turn-Key Municipal Projects Worldwide',
         subtitle: 'Wastewater Treatment (WWT)',
         icon: Building2,
-        description: 'Unique solutions utilizing the pre-engineered, prefabricated concept to minimize "heavy on-site presence". Through "Smart-Packaged Solutions", DEW implements larger municipal WWT projects with reliable "local-support".',
+        description: '"Smart-Packaged Solutions" for larger municipal WWT projects utilizing prefabricated units to provide quick solutions to distant territories (Africa, MENA, Asia).',
         images: [
             '/product/TURN-KEY MUNICIPAL PROJECTS WORLDWIDE(1).png',
             '/product/TURN-KEY MUNICIPAL PROJECTS WORLDWIDE(2).jpg',
@@ -233,14 +233,14 @@ const section2Products = [
     }
 ];
 
-// Section 3: Specialized Industrial & Advanced Filtration
+// Section 3: Industrial Process Water (Pure Water)
 const section3Products = [
     {
         id: 'demineralization',
         title: 'Demineralization for Power & PHARMA',
         subtitle: 'EDI Technology',
         icon: Beaker,
-        description: 'Systems & solutions using Electrodeionization (EDI) for Demineralized Water Production for Power Generation, Hydrogen, and Pharma industries. Providing water quality with conductivity less than 0.1 µS/cm². Fully containerized or skid mounted.',
+        description: 'Systems using Electrodeionization (EDI) for Demineralized Water Production. Critical for Power Gen, Hydrogen, and Pharma industries. Water quality with conductivity less than 0.1 µS/cm². Fully containerized or skid mounted.',
         images: [
             '/product/Demineralization for Power Generation and  PHARMA Industries(1).jpg',
             '/product/Demineralization for Power Generation and  PHARMA Industries(2)png.png',
@@ -250,23 +250,27 @@ const section3Products = [
         ],
         color: 'from-violet-500 to-purple-600',
         benefits: [
-            'Water quality with conductivity < 0.1 µS/cm²',
+            'Conductivity < 0.1 µS/cm²',
             'Fully containerized or skid mounted',
-            'For Power, Hydrogen, and Pharma industries',
-            'EDI Technology'
+            'For Power, Hydrogen, and Pharma industries'
         ],
         specs: {
             capacity: 'Up to 15,000 m³/d',
+            format: 'Fully containerized or skid mounted',
             introduction: '2006-2017',
             latestDev: '2023'
         }
-    },
+    }
+];
+
+// Section 4: Advanced Reuse & Resource Recovery
+const section4Products = [
     {
         id: 'uf-pack',
         title: '"UF-Pack"',
         subtitle: 'Tertiary Treatment for Reuse',
         icon: Filter,
-        description: 'Compact – Modular and Containerized System for the tertiary (polishing) treatment of Wastewater for Water reuse and reclamation.',
+        description: 'Compact Modular System for tertiary (polishing) treatment of Wastewater for Water Reuse and reclamation.',
         images: [
             '/product/UF-Pack.jpg'
         ],
@@ -274,8 +278,7 @@ const section3Products = [
         benefits: [
             'Compact and Modular design',
             'Water reuse and reclamation',
-            'Tertiary polishing treatment',
-            'Containerized System'
+            'Tertiary polishing treatment'
         ],
         specs: {
             capacity: 'Equivalent to 1,000 – 50,000 people',
@@ -288,16 +291,15 @@ const section3Products = [
         title: '"Ex-MBR" (Landfill Leachates)',
         subtitle: 'Cross-flow MBR Technology',
         icon: Recycle,
-        description: 'Compact–Modular and Containerized System for the Treatment of Landfill Leachates using Cross-flow MBR technology.',
+        description: 'Compact System specifically for the treatment of Landfill Leachates using Cross-flow MBR technology.',
         images: [
             '/product/Ex-MBR.jpg'
         ],
         color: 'from-amber-500 to-orange-600',
         benefits: [
             'Cross-flow MBR technology',
-            'Compact and Modular design',
             'Specialized for Landfill Leachates',
-            'Containerized System'
+            'Compact and Modular design'
         ],
         specs: {
             capacity: '50 – 300 m³/d',
@@ -308,18 +310,17 @@ const section3Products = [
     {
         id: 'micro-band-filter',
         title: '"Micro-Band-Filter" (MBF)',
-        subtitle: 'Innovative Bio-solids Recovery',
+        subtitle: 'Bio-solids Recovery',
         icon: Gauge,
-        description: 'Innovative, very compact filter that removes and recovers useful bio-solids from Municipal & Industrial wastewater (food industry) so that they can be used for energy production, through pyrolysis or gasification process.',
+        description: 'Innovative compact filter to remove and recover useful bio-solids from wastewater (e.g., Food Industry) for energy production (pyrolysis/gasification).',
         images: [
             '/product/Micro-Band-Filter%E2%80%9D (MBF),.png'
         ],
         color: 'from-orange-500 to-red-500',
         benefits: [
             'Recovers useful bio-solids',
-            'Energy production through pyrolysis/gasification',
-            'Very compact design',
-            'Suitable for food industry wastewater'
+            'Energy production (pyrolysis/gasification)',
+            'Very compact design'
         ],
         specs: {
             capacity: '50 – 250 m³/h',
@@ -333,8 +334,8 @@ const section3Products = [
 const sections = [
     {
         id: 'desalination',
-        title: 'Desalination & Water Supply Solutions',
-        subtitle: 'Drinking water, Seawater Reverse Osmosis (SWRO), and Mobile Units',
+        title: 'Seawater Desalination & Water Supply',
+        subtitle: 'Drinking water, SWRO, Mobile Units',
         icon: Waves,
         color: 'from-blue-600 to-cyan-500',
         bgColor: 'bg-gradient-to-br from-blue-50 to-cyan-50',
@@ -342,8 +343,8 @@ const sections = [
     },
     {
         id: 'municipal',
-        title: 'Municipal & Wastewater Treatment',
-        subtitle: 'Sewage treatment, MBR, MBBR, and Water Reuse',
+        title: 'Municipal Wastewater Treatment',
+        subtitle: 'Sewage treatment, MBR, MBBR',
         icon: Recycle,
         color: 'from-emerald-500 to-teal-500',
         bgColor: 'bg-gradient-to-br from-emerald-50 to-teal-50',
@@ -351,12 +352,21 @@ const sections = [
     },
     {
         id: 'industrial',
-        title: 'Specialized Industrial & Advanced Filtration',
-        subtitle: 'Industrial applications, Leachates, Demineralization, and Energy recovery',
-        icon: Factory,
+        title: 'Industrial Process Water (Pure Water)',
+        subtitle: 'Power Generation, Pharma, Hydrogen',
+        icon: Beaker,
         color: 'from-violet-500 to-purple-600',
         bgColor: 'bg-gradient-to-br from-violet-50 to-purple-50',
         products: section3Products
+    },
+    {
+        id: 'reuse',
+        title: 'Advanced Reuse & Resource Recovery',
+        subtitle: 'Tertiary Polishing, Leachates, Bio-solids',
+        icon: Factory,
+        color: 'from-orange-500 to-amber-500',
+        bgColor: 'bg-gradient-to-br from-orange-50 to-amber-50',
+        products: section4Products
     }
 ];
 
